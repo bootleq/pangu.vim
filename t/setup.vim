@@ -1,4 +1,18 @@
-describe 'setup'
+runtime! plugin/pangu.vim
+
+describe 'options'
+  it '設定預設選項'
+    Expect g:pangu_full_ending_punct      == 1
+    Expect g:pangu_full_surrounding_punct == 1
+    Expect g:pangu_half_alpha             == 1
+    Expect g:pangu_half_digit             == 1
+    Expect g:pangu_half_non_cjk_punct     == 1
+    Expect g:pangu_squeeze_cjk_punct      == 1
+    Expect g:pangu_trim_spaces            == 1
+  end
+end
+
+describe 'rules'
   before
     call vspec#hint({'sid': 'pangu#sid()'})
   end
