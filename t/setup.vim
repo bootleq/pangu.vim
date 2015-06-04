@@ -6,7 +6,7 @@ describe 'setup'
   it '於正體中文環境（台灣、香港）優先使用單引號'
     for region in ['TW', 'HK']
       if empty(system(printf('locale -a | grep zh.%s.utf8', region)))
-        echo printf("Test skipped: system missing support for 'zh-%s.utf8' locale.", region)
+        echo printf("# SKIPPED: system missing support for 'zh-%s.utf8' locale.", region)
         continue
       endif
 
