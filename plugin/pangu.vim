@@ -9,6 +9,25 @@ let load_pangu_space=1
 let g:pangu_enabled=1
 
 
+" Default Options: {{{
+
+function! s:set_default(name, value)
+  if !exists(a:name)
+    execute "let " . a:name . " = " . string(a:value)
+  endif
+endfunction
+
+call s:set_default('g:pangu_full_ending_punct',      1)
+call s:set_default('g:pangu_full_surrounding_punct', 1)
+call s:set_default('g:pangu_half_alpha',             1)
+call s:set_default('g:pangu_half_digit',             1)
+call s:set_default('g:pangu_half_non_cjk_punct',     1)
+call s:set_default('g:pangu_squeeze_cjk_punct',      1)
+call s:set_default('g:pangu_trim_spaces',            1)
+
+" }}} Default Options
+
+
 function! PanGuSpacingCore()
   let text = join(
         \   getline(1, '$'),

@@ -1,0 +1,56 @@
+*pangu.txt*                                       Paranoid text spacing in Vim
+
+Repository: https://github.com/hotoo/pangu.vim
+
+==============================================================================
+CONTENTS                                                      *pangu-contents*
+
+    Configuration  ......................... |pangu-configuration|
+      General options  ..................... |pangu-general-options|
+
+==============================================================================
+CONFIGURATION                                            *pangu-configuration*
+
+------------------------------------------------------------------------------
+General options                                        *pangu-general-options*
+
+                                                   *g:pangu_full_ending_punct*
+g:pangu_full_ending_punct      (default: 1) ~
+
+  Replace halfwidth punctuations at the end of CJK words.
+
+                                              *g:pangu_full_surrounding_punct*
+g:pangu_full_surrounding_punct (default: 1) ~
+
+  Replace halfwidth punctuations surrounding CJK words.
+  Mostly quote marks: () [] <> to（）「」＜＞.
+
+                                                          *g:pangu_half_alpha*
+g:pangu_half_alpha             (default: 1) ~
+
+  Convert fullwidth alphabeta characters (ＡＢＣ) to halfwidth (ABC).
+
+                                                          *g:pangu_half_digit*
+g:pangu_half_digit             (default: 1) ~
+
+  Convert fullwidth digit (１２３) to halfwidth (123).
+
+                                                  *g:pangu_half_non_cjk_punct*
+g:pangu_half_non_cjk_punct     (default: 1) ~
+
+  Convert fullwidth non-CJK punctuations (＠) to halfwidth (@).
+
+                                             *g:pangu_pangu_squeeze_cjk_punct*
+g:pangu_pangu_squeeze_cjk_punct~
+                               (default: 1) ~
+
+  Squeeze continuous identical CJK punctuations like "，，，"
+  and leave only one appearance.
+
+                                                         *g:pangu_trim_spaces*
+g:pangu_trim_spaces    (default: 1) ~
+
+  Remove leading and trailings spaces.
+
+==============================================================================
+vim:tw=78:fo=tcroq2mM:et:sts=2:sw=2:ft=help:norl:
