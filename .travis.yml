@@ -7,7 +7,7 @@ before_script: |
   sudo locale-gen zh_TW.UTF-8 zh_HK.UTF-8 zh_CN.UTF-8
   sudo update-locale LC_ALL=zh_TW.UTF-8 LANG=zh_TW.UTF-8
 
-  git clone --depth 1 git@github.com:vim/vim.git
+  hg clone https://vim.googlecode.com/hg/ vim
   cd vim/src
   ./configure --with-features=big
   make
